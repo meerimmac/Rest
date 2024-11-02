@@ -36,5 +36,6 @@ public class Main {
         Response response1 = requestSpecification.post("/public/v2/users");
         response1.prettyPrint();
         System.out.println(response1.getStatusCode());
+        System.out.println("gg");
     }
 }
