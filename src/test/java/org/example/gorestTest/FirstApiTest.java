@@ -39,6 +39,7 @@ public class FirstApiTest {
         Response response1 = requestSpecification.post("/public/v2/users");
         User user = response1.as(User.class);
         System.out.println(user);
+        System.out.println("hjhhkjlhkjl");
 
     }
 
