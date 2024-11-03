@@ -43,5 +43,13 @@ public class FirstApiTest {
 
     }
 
+    @Test
+    public void posttt(){
+        Response response1 = requestSpecification.post("/public/v2/users");
+        User user = response1.as(User.class);
+        System.out.println(user);
+        System.out.println("hjhhkjlhkjl");
+
+    }
 
 }
