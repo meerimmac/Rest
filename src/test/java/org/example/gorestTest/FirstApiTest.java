@@ -14,7 +14,7 @@ public class FirstApiTest {
     RequestSpecification requestSpecification;
 
     @Before
-    public void reqSpec(){
+    public void reqSpec() {
         Fakers f = new Fakers();
         String name = f.getName();
         String mail = f.getEmail();
@@ -25,8 +25,8 @@ public class FirstApiTest {
                         "    \"email\": \"%s\",\n" +
                         "    \"gender\": \"male\",\n" +
                         "    \"status\": \"active\"\n" +
-                        "}", name,mail);
-       requestSpecification = RestAssured.given()
+                        "}", name, mail);
+        requestSpecification = RestAssured.given()
                 .baseUri("https://gorest.co.in")
                 .header("Authorization", "Bearer c6477183d5938350a36b7ea47e87c1ec061c600aa43667ea215e6f9a5ea77197")
                 .contentType(ContentType.JSON)
@@ -35,7 +35,7 @@ public class FirstApiTest {
     }
 
     @Test
-    public void post(){
+    public void post() {
         Response response1 = requestSpecification.post("/public/v2/users");
         User user = response1.as(User.class);
         System.out.println(user);
@@ -44,11 +44,21 @@ public class FirstApiTest {
     }
 
     @Test
-    public void posttt(){
+    public void posttt() {
         Response response1 = requestSpecification.post("/public/v2/users");
         User user = response1.as(User.class);
         System.out.println(user);
         System.out.println("hjhhkjlhkjl");
+
+    }
+
+    @Test
+    public void post1() {
+        Response response1 = requestSpecification.post("/public/v2/users");
+        User user = response1.as(User.class);
+        System.out.println(user);
+        System.out.println("hjhhkjlhkjl");
+
 
     }
 
